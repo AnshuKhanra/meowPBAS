@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchoolHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">🎓 SchoolHub</div>
+        <div class="nav-links">
+            <a href="#" onclick="showPage('home')" class="nav-link active">Home</a>
+            <a href="#" onclick="showPage('literature')" class="nav-link">📚 Literature</a>
+            <a href="#" onclick="showPage('science')" class="nav-link">🔬 Science</a>
+            <button onclick="showPage('login')" class="login-btn" id="loginBtn">Login</button>
+            <div class="user-info" id="userInfo" style="display:none;">
+                <span id="userName"></span>
+                <button onclick="logout()" class="logout-btn">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page active" id="home">
+        <div class="hero">
+            <h1>Welcome to <span class="gradient">SchoolHub</span></h1>
+            <p>Your comprehensive school information system</p>
+            <div class="features">
+                <div class="feature-card" onclick="showPage('literature')">
+                    <div class="icon">📚</div>
+                    <h3>Literature</h3>
+                    <p>Explore classic texts and writing skills</p>
+                </div>
+                <div class="feature-card" onclick="showPage('science')">
+                    <div class="icon">🔬</div>
+                    <h3>Science</h3>
+                    <p>Discover chemistry, biology, and physics</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="login">
+        <div class="login-card">
+            <h2>Student Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <input type="text" id="studentName" placeholder="Enter your name" required>
+                <button type="submit">🔐 Login</button>
+            </form>
+            <div class="demo-students">
+                <p><strong>Demo Students:</strong></p>
+                <div class="student-list">
+                    <span onclick="fillName('John Smith')">John Smith</span>
+                    <span onclick="fillName('Emma Johnson')">Emma Johnson</span>
+                    <span onclick="fillName('Michael Brown')">Michael Brown</span>
+                </div>
+            </div>
+            <div class="error" id="loginError"></div>
+        </div>
+    </div>
+
+    <div class="page" id="literature">
+        <div class="content">
+            <h1>📚 Literature</h1>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>📖 Classic Literature</h3>
+                    <ul><li>Romeo and Juliet</li><li>Pride and Prejudice</li><li>Great Expectations</li></ul>
+                </div>
+                <div class="content-card">
+                    <h3>✍️ Writing Skills</h3>
+                    <ul><li>Essay Writing</li><li>Creative Writing</li><li>Grammar & Style</li></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="science">
+        <div class="content">
+            <h1>🔬 Science</h1>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>🧪 Chemistry</h3>
+                    <ul><li>Atomic Structure</li><li>Chemical Bonding</li><li>Organic Chemistry</li></ul>
+                </div>
+                <div class="content-card">
+                    <h3>🔬 Biology</h3>
+                    <ul><li>Cell Biology</li><li>Genetics</li><li>Evolution</li></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
