@@ -1,7 +1,9 @@
 const students = [
     { name: 'John Smith', class: '10th Grade', email: 'john.smith@school.edu' },
     { name: 'Emma Johnson', class: '9th Grade', email: 'emma.johnson@school.edu' },
-    { name: 'Michael Brown', class: '11th Grade', email: 'michael.brown@school.edu' }
+    { name: 'Michael Brown', class: '11th Grade', email: 'michael.brown@school.edu' },
+    { name: 'Anshu Khanra', class: '8th Grade', email:'anshu.khanra@shcool.edu'},
+    { name: 'Shivansh Saurya', class: '8th Grade', email:'shivansh.saurya@school.edu'}
 ];
 
 let currentStudent = null;
